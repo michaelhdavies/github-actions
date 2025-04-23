@@ -1,31 +1,31 @@
-# name: Checking Tests
+name: Checking Tests
 
-# on:
-#   pull_request:
-#     branches:
-#       - develop
-#       - staging
+on:
+  pull_request:
+    branches:
+      - develop
+      - staging
 
-# jobs:
-#   test:
-#     name: Checking Tests
-#     runs-on: ubuntu-latest
+jobs:
+  test:
+    name: Checking Tests
+    runs-on: ubuntu-latest
 
-#     steps:
-#       - name: Checkout code
-#         uses: actions/checkout@v4
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-#       - name: Set up Node.js
-#         uses: actions/setup-node@v4
-#         with:
-#           node-version: 21.x
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 21.x
 
-#       - name: Install dependencies
-#         run: npm install
+      - name: Install dependencies
+        run: npm install
       
-#       - name: Build App
-#         run: npm run build
+      - name: Build App
+        run: npm run build
 
-#       - name: Run vitest tests
-#         run: npm run test
+      - name: Run vitest tests
+        run: npm run test-component
 
